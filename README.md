@@ -3,16 +3,19 @@
 ## 기본 구조
 
 1.`src/components`
+
     - `./layout` : 레이아웃 관련
         - Footer.js 
         - Header.js 
         - Layout.js 
+
     - `./sections` : 메인 화면 연락처, 기술, 프로젝트 등 영역 관련
         - About.js
         - Contact.js
         - Hero.js
         - Projects.js 
         - Skills.js 
+        
     - `./ui` : 메인 화면 버튼, 프로젝트 카드, 기술 등 UI 관련
         - Button.js 
         - ProjectCard.js 
