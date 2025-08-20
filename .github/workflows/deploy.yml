@@ -33,6 +33,8 @@ jobs:
           script: |
             sudo rm -rf /var/www/build
             sudo mkdir -p /var/www/build
+            sudo chown -R $USER:$USER /var/www/build
+            sudo chmod -R 755 /var/www/build
 
       - name: Deploy to Oracle server
         uses: appleboy/scp-action@v0.1.7
@@ -44,7 +46,7 @@ jobs:
           target: "/var/www/build"
           strip_components: 1
 
-      - name: Set proper permissions
+      - name: Set proper permissions for nginx
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -53,4 +55,4 @@ jobs:
           script: |
             sudo chown -R www-data:www-data /var/www/build
             sudo chmod -R 755 /var/www/build
-            sudo chmod -R 644 /var/www/build/*
+            sudo find /var/www/build -type f -exec chmod 644 {} \;
