@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>김개발</h3>
+            <h3>이주영</h3>
             <p>창의적이고 열정적인 웹 개발자</p>
           </div>
           
