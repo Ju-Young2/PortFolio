@@ -14,8 +14,8 @@
         - Contact.js
         - Hero.js
         - Projects.js 
-        - Skills.js 
-        
+        - Skills.js  
+
     - `./ui` : 메인 화면 버튼, 프로젝트 카드, 기술 등 UI 관련
         - Button.js 
         - ProjectCard.js 
