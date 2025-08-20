@@ -47,3 +47,5 @@
         - skills.css
     
     - globals.css
+
+# 깃허브 액션 수정
