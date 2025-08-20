@@ -53,6 +53,10 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo chown -R www-data:www-data /var/www/build
+            sudo chown -R nginx:nginx /var/www/build
             sudo chmod -R 755 /var/www/build
             sudo find /var/www/build -type f -exec chmod 644 {} \;
+            
+            ls -la /var/www/build/
+            
+            sudo systemctl restart nginx
