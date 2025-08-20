@@ -46,17 +46,18 @@ jobs:
           target: "/var/www/build"
           strip_components: 1
 
-      - name: Set proper permissions for nginx
+      - name: Set permissions and SELinux context 
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo chown -R nginx:nginx /var/www/build
+            sudo chown -R rocky:rocky /var/www/build
             sudo chmod -R 755 /var/www/build
             sudo find /var/www/build -type f -exec chmod 644 {} \;
             
-            ls -la /var/www/build/
+            sudo setsebool -P httpd_read_user_content 1
+            sudo restorecon -Rv /var/www/build/
             
             sudo systemctl restart nginx
