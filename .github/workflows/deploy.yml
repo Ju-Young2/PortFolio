@@ -33,7 +33,6 @@ jobs:
           script: |
             sudo rm -rf /var/www/build
             sudo mkdir -p /var/www/build
-            sudo chown -R $USER:$USER /var/www/build
 
       - name: Deploy to Oracle server
         uses: appleboy/scp-action@v0.1.7
@@ -44,3 +43,14 @@ jobs:
           source: "build/*"
           target: "/var/www/build"
           strip_components: 1
+
+      - name: Set proper permissions
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            sudo chown -R www-data:www-data /var/www/build
+            sudo chmod -R 755 /var/www/build
+            sudo chmod -R 644 /var/www/build/*
