@@ -5,29 +5,31 @@ const SkillBar = ({ name, level, delay = 0 }) => {
   const [animatedLevel, setAnimatedLevel] = useState(0);
   const skillRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          setTimeout(() => {
-            setAnimatedLevel(level);
-          }, delay * 1000);
-        }
-      },
-      { threshold: 0.5 }
-    );
+useEffect(() => {
+  const node = skillRef.current;
 
-    if (skillRef.current) {
-      observer.observe(skillRef.current);
-    }
-
-    return () => {
-      if (skillRef.current) {
-        observer.unobserve(skillRef.current);
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        setTimeout(() => {
+          setAnimatedLevel(level);
+        }, delay * 1000);
       }
-    };
-  }, [level, delay]);
+    },
+    { threshold: 0.5 }
+  );
+
+  if (node) {
+    observer.observe(node);
+  }
+
+  return () => {
+    if (node) { 
+      observer.unobserve(node);
+    }
+  };
+}, [level, delay]);
 
   return (
     <div ref={skillRef} className="skill-item">
