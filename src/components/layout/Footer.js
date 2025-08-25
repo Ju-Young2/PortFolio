@@ -26,15 +26,17 @@ const Footer = () => {
             <div className="social-links">
               <a href={personalInfo.social.github} target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-github"></i>
+                <span>GitHub</span>
               </a>
-              <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer">
+              {/* <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-linkedin"></i>
               </a>
               <a href={personalInfo.social.twitter} target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-twitter"></i>
-              </a>
+              </a> */}
               <a href={personalInfo.social.blog} target="_blank" rel="noopener noreferrer">
                 <i className="fas fa-blog"></i>
+                <span>Blog</span>
               </a>
             </div>
           </div>
