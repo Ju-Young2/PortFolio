@@ -1,12 +1,12 @@
 export const projectsData = [
   {
     id: 1,
-    title: "쇼핑몰 웹사이트",
-    description: "React와 Node.js로 구축한 풀스택 이커머스 플랫폼입니다. 사용자 인증, 결제 시스템, 관리자 패널을 포함합니다.",
+    title: "고객 관리 프로그램",
+    description: "보안 회사의 고객사를 관리할 수 있는 풀스택 웹 애플리케이션입니다. 사용자 친화적인 인터페이스와 강력한 백엔드 기능을 제공합니다.",
     icon: "fas fa-shopping-cart",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    technologies: ["React", "Vite", "FastAPI", "MongoDB Atlas"],
     demoUrl: "https://demo-ecommerce.com",
-    githubUrl: "https://github.com/yourusername/ecommerce",
+    githubUrl: "https://github.com/Ju-Young2/blackpink",
     category: "fullstack"
   },
   // {

@@ -111,6 +111,8 @@
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  grid-column: 1 / -1; /* 전체 컬럼 차지 */
+  margin-top: 2rem; /* 위쪽 여백 추가 */
 }
 
 .experience-section h3 {
@@ -129,7 +131,6 @@
   padding: 1.5rem;
   background: #f8f9fa;
   border-radius: 10px;
-  border-left: 4px solid #667eea;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -205,5 +206,159 @@
   
   .experience-item {
     padding: 1rem;
+  }
+}
+
+/* 기존 CSS에 추가할 캐러셀 스타일 */
+
+/* 캐러셀 컨테이너 */
+.experience-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.carousel-container {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item {
+  width: 100%;
+  padding: 2rem;
+  background: #f8f9fa;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carousel-item h4 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.carousel-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* 네비게이션 버튼 */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.nav-btn {
+  background: rgba(102, 126, 234, 0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.nav-btn:hover {
+  background: rgba(102, 126, 234, 1);
+  transform: scale(1.1);
+}
+
+.prev-btn {
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+.next-btn {
+  margin-right: -20px;
+  margin-top: -20px;
+}
+
+/* 인디케이터 */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: #667eea;
+  transform: scale(1.2);
+}
+
+.indicator:hover {
+  background: #764ba2;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .experience-carousel {
+    max-width: 100%;
+  }
+  
+  .carousel-item {
+    padding: 1.5rem;
+    min-height: 120px;
+  }
+  
+  .carousel-item h4 {
+    font-size: 1.1rem;
+  }
+  
+  .carousel-item p {
+    font-size: 0.9rem;
+  }
+  
+  .nav-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
+  
+  .prev-btn {
+    margin-left: -17px;
+  }
+  
+  .next-btn {
+    margin-right: -17px;
   }
 }

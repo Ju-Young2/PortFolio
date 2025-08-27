@@ -4,6 +4,16 @@ import { personalInfo } from '../../data/personalInfo';
 import '../../styles/components/Hero.css';
 
 const Hero = () => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <section className="hero">
       <div className="hero-content">
@@ -11,9 +21,9 @@ const Hero = () => {
         <p className="hero-subtitle">{personalInfo.title}</p>
         <p className="hero-description">{personalInfo.description}</p>
         <div className="hero-buttons">
-          <Link to="/about" className="cta-button primary">
+          <button onClick={scrollToAbout} className="cta-button primary">
             더 알아보기
-          </Link>
+          </button>
           <Link to="/projects" className="cta-button secondary">
             프로젝트 보기
           </Link>

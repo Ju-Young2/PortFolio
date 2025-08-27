@@ -7,7 +7,7 @@ const Skills = () => {
   return (
     <section id="skills" className="section skills-section">
       <div className="container">
-        <h2 className="section-title">기술 스택</h2>
+        <h2 className="section-title">자격증</h2>
         <div className="skills-grid">
           {skillsData.map((category, index) => (
             <div key={index} className="skill-category">
