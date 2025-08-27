@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/components/About.css';
+import profilePhoto from '../../assets/profile.png'
 
 const About = () => {
   return (
@@ -8,6 +9,7 @@ const About = () => {
         <h2>소개</h2>
         <div className="about-content">
           <div className="profile-img">
+            <img src={profilePhoto} alt="Profile"/>
             <i className="fas fa-user"></i>
           </div>
           <div className="about-text">

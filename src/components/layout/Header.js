@@ -19,6 +19,7 @@ const Header = () => {
     { path: '/', label: '홈' },
     { path: '/about', label: '소개' },
     { path: '/skills', label: '기술' },
+    { path: '/lab', label: '실험실' }, // 실험실 or 연습장
     { path: '/projects', label: '프로젝트' },
     { path: '/contact', label: '연락처' }
   ];
