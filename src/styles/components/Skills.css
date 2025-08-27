@@ -1,11 +1,136 @@
-/* Skills Section Styles */
+/* Skills Section Styles - Certificate Version */
 .skills-section {
   background: #f8f9fa;
 }
 
+.no-certificates {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+.no-certificates p {
+  font-size: 1.2rem;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.certificate-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.certificate-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-image {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.certificate-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.certificate-card:hover .certificate-image img {
+  transform: scale(1.05);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.image-placeholder i {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.image-placeholder span {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.certificate-info {
+  padding: 1.5rem;
+}
+
+.certificate-name {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.certificate-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 500;
+  color: #667eea;
+  font-size: 0.95rem;
+}
+
+.detail-value {
+  color: #333;
+  font-size: 0.95rem;
+  text-align: right;
+  flex: 1;
+  margin-left: 1rem;
+}
+
+/* Skills Page Specific Styles */
+.skills-page .section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* Legacy styles for backward compatibility */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -90,85 +215,57 @@
   }
 }
 
-/* Skills Page Specific Styles */
-.skills-page .tech-details {
-  margin-top: 3rem;
-}
-
-.tech-category {
-  background: white;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-}
-
-.tech-category h3 {
-  color: #667eea;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-.tech-category p {
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.tech-category ul {
-  list-style: none;
-  padding: 0;
-}
-
-.tech-category li {
-  color: #555;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #f0f0f0;
-  position: relative;
-  padding-left: 1.5rem;
-}
-
-.tech-category li:before {
-  content: '▸';
-  color: #667eea;
-  position: absolute;
-  left: 0;
-  top: 0.5rem;
-}
-
-.tech-category li:last-child {
-  border-bottom: none;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  .skills-grid {
+  .certificates-grid {
     grid-template-columns: 1fr;
   }
   
-  .skill-category {
-    padding: 1.5rem;
+  .certificate-card {
+    margin: 0 1rem;
   }
   
-  .category-title {
+  .certificate-info {
+    padding: 1rem;
+  }
+  
+  .certificate-name {
     font-size: 1.2rem;
   }
   
-  .tech-category {
-    padding: 1.5rem;
+  .detail-label,
+  .detail-value {
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
-  .skills-grid {
+  .certificates-grid {
     gap: 1rem;
+    grid-template-columns: 1fr;
+    margin: 0 0.5rem;
   }
   
-  .skill-category {
-    padding: 1rem;
+  .certificate-image {
+    height: 150px;
   }
   
-  .category-title {
+  .certificate-info {
+    padding: 0.8rem;
+  }
+  
+  .certificate-name {
     font-size: 1.1rem;
+  }
+  
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  
+  .detail-value {
+    text-align: left;
+    margin-left: 0;
   }
 }
