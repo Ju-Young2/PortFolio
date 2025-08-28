@@ -34,7 +34,7 @@ const Header = () => {
   const navItems = [
     { path: '/', label: '홈' },
     { path: '/skills', label: '자격증' },
-    { path: '/lab', label: '실험실' }, // 실험실 or 연습장
+    { path: '/labs', label: '실험실' }, // 실험실 or 연습장
     { path: '/projects', label: '프로젝트' },
     { path: '/contact', label: '연락처' }
   ];

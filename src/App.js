@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import SkillsPage from './pages/SkillsPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
+import LabsPage from './pages/LabsPage';
 import './App.css';
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/labs" element={<LabPage />} /> */}
+          <Route path="/labs" element={<LabsPage />} />
           <Route path="/skills" element={<SkillsPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/contact" element={<ContactPage />} />
