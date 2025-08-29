@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectCard from '../ui/ProjectCard';
+import LabCard from '../ui/LabCard';
 import { labsData } from '../../data/labs';
 import '../../styles/components/Projects.css';
 
@@ -9,10 +9,10 @@ const Labs = () => {
       <div className="container">
         <h2 className="section-title">실험실</h2>
         <div className="projects-grid">
-          {labsData.map((project, index) => (
-            <ProjectCard
+          {labsData.map((lab, index) => (
+            <LabCard
               key={index}
-              project={project}
+              lab={lab}
               delay={index * 0.1}
             />
           ))}

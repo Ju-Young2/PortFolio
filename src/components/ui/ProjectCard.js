@@ -24,7 +24,7 @@ const ProjectCard = ({ project, delay = 0 }) => {
         <div className="project-links">
           {project.demoUrl && (
             <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-              <i className="fas fa-external-link-alt"></i> 라이브 데모 (예정)
+              <i className="fas fa-external-link-alt"></i> 라이브 데모
             </a>
           )}
           {project.githubUrl && (

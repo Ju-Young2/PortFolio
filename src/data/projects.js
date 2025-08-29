@@ -5,7 +5,7 @@ export const projectsData = [
     description: "보안 회사의 고객사를 관리할 수 있는 풀스택 웹 애플리케이션입니다. 사용자 친화적인 인터페이스와 강력한 백엔드 기능을 제공합니다.",
     icon: "fas fa-shopping-cart",
     technologies: ["React", "Vite", "FastAPI", "MongoDB Atlas"],
-    demoUrl: "https://demo-ecommerce.com",
+    demoUrl: "http://140.83.49.106:8002/",
     githubUrl: "https://github.com/Ju-Young2/blackpink",
     category: "fullstack"
   },
