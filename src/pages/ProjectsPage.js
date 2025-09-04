@@ -8,7 +8,7 @@ const ProjectsPage = () => {
   const categories = [
     { value: 'all', label: '전체' },
     { value: 'fullstack', label: '풀스택' },
-    { value: 'frontend', label: '프론트엔드' },
+    { value: 'frontend', label: '프론트엔드' }, 
     { value: 'mobile', label: '모바일' },
     { value: 'ai', label: 'AI' }
   ];
