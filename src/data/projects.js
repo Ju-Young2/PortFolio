@@ -9,16 +9,16 @@ export const projectsData = [
     githubUrl: "https://github.com/Ju-Young2/blackpink",
     category: "fullstack"
   },
-  // {
-  //   id: 2,
-  //   title: "데이터 시각화 대시보드",
-  //   description: "D3.js를 활용한 인터랙티브 데이터 시각화 대시보드입니다. 실시간 데이터 업데이트와 다양한 차트를 지원합니다.",
-  //   icon: "fas fa-chart-line",
-  //   technologies: ["Vue.js", "D3.js", "Express", "MySQL"],
-  //   demoUrl: "https://demo-dashboard.com",
-  //   githubUrl: "https://github.com/yourusername/dashboard",
-  //   category: "frontend"
-  // },
+  {
+    id: 2,
+    title: "환율 추이 분석 및 예측 대시보드",
+    description: "머신러닝과 딥러닝을 통한 환율 정보를 분석, 예측하고 시각화까지 연결한 대시보드입니다",
+    icon: "fas fa-chart-line",
+    technologies: ["React", "Vite", "FastAPI", "MongoDB Atlas", "LSTM"],
+    demoUrl: "https://demo-dashboard.com",
+    githubUrl: "https://github.com/yourusername/dashboard",
+    category: "fullstack"
+  },
   // {
   //   id: 3,
   //   title: "모바일 앱 (React Native)",

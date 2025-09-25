@@ -18,6 +18,9 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
   animation: fadeInUp 0.6s ease forwards;
+  display: flex; /* 추가 */
+  flex-direction: column; /* 추가 */
+  cursor: pointer; /* 추가 - 클릭 가능하다는 것을 표시 */
 }
 
 .project-card:hover {
@@ -35,6 +38,7 @@
   color: white;
   position: relative;
   overflow: hidden;
+  flex-shrink: 0; /* 추가 - 이미지 영역 고정 크기 유지 */
 }
 
 .project-img::before {
@@ -55,6 +59,9 @@
 
 .project-info {
   padding: 1.5rem;
+  display: flex; /* 추가 */
+  flex-direction: column; /* 추가 */
+  flex-grow: 1; /* 추가 - 남은 공간을 모두 차지 */
 }
 
 .project-info h3 {
@@ -69,6 +76,7 @@
   margin-bottom: 1rem;
   line-height: 1.6;
   font-size: 0.95rem;
+  flex-grow: 1; /* 추가 - 설명 영역이 가변 크기를 가짐 */
 }
 
 .project-tech {
@@ -89,13 +97,15 @@
 }
 
 .tech-tag:hover {
-  background: #764ba2;
+  background: #A6DAF4;
 }
 
 .project-links {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-top: auto; /* 추가 - 링크들을 카드 하단에 고정 */
+  padding-top: 0.5rem; /* 추가 - 위쪽에 약간의 여백 */
 }
 
 .project-links a {
