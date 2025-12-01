@@ -1,12 +1,12 @@
 export const certificatesData = [
-  // {
-  //   name: "정보처리기사",
-  //   image: "/images/certificates/information-processing.jpg", // 자격증 이미지 경로
-  //   icon: "fas fa-laptop-code",
-  //   obtainedDate: "2024년 5월",
-  //   issuer: "한국산업인력공단",
-  //   validUntil: "영구"
-  // },
+  {
+    name: "데이터분석 준전문가",
+    image: "/images/certificates/adsp.jpg", // 자격증 이미지 경로
+    icon: "fas fa-laptop-code",
+    obtainedDate: "2025년 11월",
+    issuer: "한국데이터산업진흥원",
+    validUntil: "영구"
+  },
   {
     name: "SQLD",
     image: "/images/certificates/sqld.jpg",
